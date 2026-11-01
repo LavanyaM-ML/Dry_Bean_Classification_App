@@ -56,7 +56,7 @@ classes = list(le.classes_)
 #  header 
 st.title(" Dry Bean Classification Dashboard")
 st.caption("Compare 5 pre-trained ML models on dry-bean shape measurements "
-           "(UCI Dry Bean Dataset, 7 bean types). Models are loaded from disk – nothing is retrained.")
+           "(UCI Dry Bean Dataset, 7 bean types)")
 
 #  sidebar 
 st.sidebar.header("Controls")
@@ -91,7 +91,7 @@ if unknown:
 X = scaler.transform(data[features])
 y_true = le.transform(data[TARGET].astype(str))
 
-#  predict with every model (cached per upload) 
+#  predict with every model 
 @st.cache_data(show_spinner="Running all models...")
 def run_all(X, y_true):
     out = {}
@@ -128,7 +128,7 @@ with tab1:
     ax.legend(loc="lower right")
     st.pyplot(fig); plt.close(fig)
 
-#  tab 2: confusion matrix 
+#  confusion matrix 
 with tab2:
     cm = confusion_matrix(y_true, pred, labels=list(range(len(classes))))
     normalize = st.toggle("Show as % of each actual class", value=False)
