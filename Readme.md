@@ -26,7 +26,8 @@ Five classification models are trained on the same data and compared using six e
 
 <https://github.com/LavanyaM-ML/Dry_Bean_Classification_App>
 
-**Live Streamlit app:** <PASTE YOUR STREAMLIT APP LINK HERE>
+**Live Streamlit app:** <https://drybeancls.streamlit.app>
+
 
 ## d. Models used
 
